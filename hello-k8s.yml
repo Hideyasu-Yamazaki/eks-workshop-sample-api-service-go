@@ -7,7 +7,7 @@ spec:
   ports:
     - port: 80
       targetPort: 9080
-#      targetPort: 9080
+#      targetPort: 8080
 selector:
     app: hello-k8s
 ---
@@ -40,4 +40,4 @@ spec:
 #            allowPrivilegeEscalation: false
           ports:
             - containerPort: 9080
-#            - containerPort: 9080
+#            - containerPort: 8080
