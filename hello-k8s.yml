@@ -32,9 +32,9 @@ spec:
       containers:
         - name: hello-k8s
           image: 303949471338.dkr.ecr.ap-northeast-1.amazonaws.com/internal-auth-web:aurora-static-v0
-          securityContext:
-            privileged: false
-            readOnlyRootFilesystem: true
-            allowPrivilegeEscalation: false
+#          securityContext:
+#            privileged: false
+#            readOnlyRootFilesystem: true
+#            allowPrivilegeEscalation: false
           ports:
             - containerPort: 9080
