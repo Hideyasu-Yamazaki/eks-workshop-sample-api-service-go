@@ -6,7 +6,7 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 9080
   selector:
     app: hello-k8s
 ---
@@ -31,10 +31,10 @@ spec:
     spec:
       containers:
         - name: hello-k8s
-          image: CONTAINER_IMAGE
+          image: 303949471338.dkr.ecr.ap-northeast-1.amazonaws.com/internal-auth-web:aurora-static-v0
           securityContext:
             privileged: false
             readOnlyRootFilesystem: true
             allowPrivilegeEscalation: false
           ports:
-            - containerPort: 8080
+            - containerPort: 9080
