@@ -7,7 +7,6 @@ spec:
   ports:
     - port: 80
       targetPort: 9080
-#      targetPort: 8080
 selector:
     app: hello-k8s
 ---
@@ -33,11 +32,5 @@ spec:
       containers:
         - name: hello-k8s
           image: 303949471338.dkr.ecr.ap-northeast-1.amazonaws.com/internal-auth-web:aurora-static-v0
-#          image: CONTAINER_IMAGE
-#          securityContext:
-#            privileged: false
-#            readOnlyRootFilesystem: true
-#            allowPrivilegeEscalation: false
           ports:
             - containerPort: 9080
-#            - containerPort: 8080
